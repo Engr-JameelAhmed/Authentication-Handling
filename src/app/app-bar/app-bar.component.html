@@ -1,0 +1,26 @@
+<mat-toolbar color="primary" class="app-toolbar" [class.sticky] ='isSticky'>
+  <span>{{ appName }}</span>
+  <span class="example-spacer"></span>
+      <div id="g_id_onload"
+        data-client_id="409147130517-hiisldb5im18p9lif8811io1l4msevst.apps.googleusercontent.com"
+        data-context="signin"
+        data-ux_mode="popup"
+        data-login_uri="http://localhost:4200"
+        data-callback="handleOauthResponse"
+        data-auto_prompt="false">
+      </div>
+      <div class="g_id_signin"
+        data-type="standard"
+        data-shape="pill"
+        data-theme="filled_black"
+        data-text="signin_with"
+        data-size="large"
+        data-logo_alignment="left">
+      </div>
+  <button (click)="openDialog()" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>login</mat-icon>
+  </button>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>shopping_cart</mat-icon>
+  </button>
+</mat-toolbar>

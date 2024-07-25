@@ -1,0 +1,105 @@
+<h2 mat-dialog-title *ngIf="!isSignUpOrLogin">Login</h2>
+<h2 mat-dialog-title *ngIf="isSignUpOrLogin">SignUp</h2>
+
+<div *ngIf="!isSignUpOrLogin">
+  <mat-dialog-content>
+    <mat-form-field>
+      <mat-label>UserName / Email</mat-label>
+      <input matInput [(ngModel)]="data.username">
+    </mat-form-field>
+    <div>
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input matInput type="password" [(ngModel)]="data.password">
+      </mat-form-field>
+    </div>
+  </mat-dialog-content>
+  <div class="marginLeft" (click)="openLogin()">
+    Don't have an account ? <button mat-button>SignUp</button>
+  </div>
+
+  <mat-dialog-actions class="center">
+    <button mat-button (click)="login()" cdkFocusInitial>Ok</button>
+    <button mat-button (click)="onNoClick()">Close</button>
+  </mat-dialog-actions>
+  <mat-divider></mat-divider>
+  <!-- <div id="g_id_onload"
+      data-client_id="409147130517-hiisldb5im18p9lif8811io1l4msevst.apps.googleusercontent.com"
+      data-context="signin"
+      data-ux_mode="popup"
+      data-login_uri="http://localhost:4200"
+      data-auto_prompt="false">
+    </div>
+
+    <div class="g_id_signin"
+        data-type="standard"
+        data-shape="pill"
+        data-theme="filled_black"
+        data-text="signin_with"
+        data-size="large"
+        data-logo_alignment="left">
+    </div> -->
+    hello
+</div>
+
+                        <!------------------- signUp ------------------- -->
+
+<div *ngIf="isSignUpOrLogin">
+  <mat-dialog-content>
+
+    <mat-form-field>
+      <mat-label>UserName</mat-label>
+      <input matInput [(ngModel)]="registerationData.userName">
+    </mat-form-field>
+    <div>
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput [(ngModel)]="registerationData.userEmail">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <mat-label>Mobile Number</mat-label>
+        <input matInput [(ngModel)]="registerationData.userMobile">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <mat-label>Address</mat-label>
+        <input matInput [(ngModel)]="registerationData.userAddress">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input matInput type="password" [(ngModel)]="registerationData.userPassword">
+      </mat-form-field>
+    </div>
+  </mat-dialog-content>
+  <div class="marginLeft" (click)="openSignUp()">
+    Already have an account ? <button mat-button>Login</button>
+  </div>
+
+  <mat-dialog-actions class="center">
+    <button mat-button (click)="SignUp()" cdkFocusInitial>Ok</button>
+    <button mat-button (click)="onNoClick()">Close</button>
+  </mat-dialog-actions>
+  <mat-divider></mat-divider>
+    <!-- <div id="g_id_onload"
+      data-client_id="409147130517-hiisldb5im18p9lif8811io1l4msevst.apps.googleusercontent.com"
+      data-context="signin"
+      data-ux_mode="popup"
+      data-login_uri="http://localhost:4200"
+      data-auto_prompt="false">
+    </div>
+
+    <div class="g_id_signin"
+        data-type="standard"
+        data-shape="pill"
+        data-theme="filled_black"
+        data-text="signin_with"
+        data-size="large"
+        data-logo_alignment="left">
+    </div> -->
+    hello
+</div>
